@@ -1,0 +1,69 @@
+/* ============================================
+   Responsive — Tablet & Mobile
+   ============================================ */
+
+/* ----- Tablet (<= 960px) ----- */
+@media (max-width: 960px) {
+    .hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-md);
+    }
+    .hero__content .badge { margin-inline: auto; }
+    .hero__tagline { margin-inline: auto; }
+    .hero__actions,
+    .hero__socials { justify-content: center; }
+    .hero__visual { order: -1; }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    .about__highlights li { justify-content: flex-start; }
+
+    .contact-wrap { grid-template-columns: 1fr; }
+}
+
+/* ----- Mobile (<= 720px) ----- */
+@media (max-width: 720px) {
+    :root { --space-xl: 4.5rem; --space-lg: 2.8rem; }
+
+    .navbar__nav {
+        position: fixed;
+        top: 0; right: 0;
+        height: 100vh;
+        width: min(78vw, 320px);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1.6rem;
+        padding: 2rem 2.2rem;
+        background: rgba(8, 10, 24, 0.96);
+        backdrop-filter: blur(20px);
+        border-left: 1px solid var(--border);
+        transform: translateX(100%);
+        transition: transform 0.4s var(--ease);
+    }
+    .navbar__nav.is-open { transform: translateX(0); }
+    .navbar__link { font-size: 1.15rem; }
+    .navbar__toggle { display: flex; z-index: 950; }
+
+    .navbar__name { display: none; }
+
+    .stats { grid-template-columns: repeat(2, 1fr); }
+
+    .hero { padding-top: 120px; }
+    .hero__actions { flex-direction: column; width: 100%; }
+    .hero__actions .btn { justify-content: center; width: 100%; }
+
+    .footer__brand { flex-direction: column; text-align: center; }
+
+    .contact-info { grid-template-columns: 1fr; }
+    .to-top { right: 1rem; bottom: 1rem; }
+}
+
+/* ----- Small mobile (<= 420px) ----- */
+@media (max-width: 420px) {
+    .stats { grid-template-columns: 1fr; }
+    .profile-chip { font-size: 0.78rem; padding: 0.4rem 0.7rem; }
+}

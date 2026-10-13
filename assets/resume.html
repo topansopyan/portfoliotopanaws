@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume — Topan Sopyan</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #1a1d2b;
+            background: #e9ecf5;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .sheet {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+        }
+        header {
+            border-bottom: 3px solid #6c5ce7;
+            padding-bottom: 1.2rem;
+            margin-bottom: 1.6rem;
+        }
+        h1 { font-size: 2rem; color: #0a0d1f; }
+        .role { color: #6c5ce7; font-weight: 600; margin-top: 0.2rem; }
+        .meta { margin-top: 0.8rem; font-size: 0.9rem; color: #555; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+        .meta a { color: #4834d4; text-decoration: none; }
+        h2 {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #6c5ce7;
+            margin: 1.6rem 0 0.7rem;
+        }
+        ul { margin-left: 1.2rem; }
+        li { margin-bottom: 0.3rem; }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .tag {
+            background: #f0eefc; color: #4834d4;
+            padding: 0.25rem 0.7rem; border-radius: 6px;
+            font-size: 0.82rem; font-weight: 500;
+        }
+        .print-btn {
+            display: block; margin: 0 auto 1.5rem;
+            background: #6c5ce7; color: #fff;
+            padding: 0.7rem 1.4rem; border: none; border-radius: 999px;
+            font-size: 0.95rem; cursor: pointer;
+        }
+        @media print {
+            body { background: #fff; padding: 0; }
+            .sheet { box-shadow: none; padding: 1.5rem; }
+            .print-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Cetak / Simpan sebagai PDF</button>
+    <div class="sheet">
+        <header>
+            <h1>Topan Sopyan</h1>
+            <p class="role">Web Developer · Full-Stack AI Engineer · Educator</p>
+            <div class="meta">
+                <span>📍 Karawang, Indonesia</span>
+                <span>📱 081298023889</span>
+                <a href="mailto:topan821@guru.sma.belajar.id">✉️ topan821@guru.sma.belajar.id</a>
+                <a href="https://www.topansopyan.blog" target="_blank">🌐 www.topansopyan.blog</a>
+            </div>
+        </header>
+
+        <h2>Profil</h2>
+        <p>
+            Topan Sopyan is a passionate Web Developer, Full-Stack AI Engineer, and Educator with
+            expertise in web development, full-stack systems, artificial intelligence, and
+            educational technology. He specializes in building modern web applications, AI-powered
+            solutions, interactive learning media, and digital platforms that enhance productivity
+            and transform education.
+        </p>
+
+        <h2>Keahlian</h2>
+        <div class="tags">
+            <span class="tag">HTML/CSS/JS</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PHP / Laravel</span>
+            <span class="tag">Python</span>
+            <span class="tag">AI / LLM</span>
+            <span class="tag">NLP</span>
+            <span class="tag">EdTech / LMS</span>
+            <span class="tag">Clean Architecture</span>
+        </div>
+
+        <h2>Pengalaman</h2>
+        <ul>
+            <li>Membangun aplikasi web modern & sistem full-stack yang scalable.</li>
+            <li>Mengembangkan solusi berbasis AI untuk produktivitas dan pembelajaran.</li>
+            <li>Merancang media pembelajaran interaktif dan platform edukasi digital.</li>
+            <li>Membimbing siswa dalam pengembangan perangkat lunak dan literasi teknologi.</li>
+        </ul>
+
+        <h2>Tautan</h2>
+        <ul>
+            <li>GitHub: <a href="https://github.com/topansopyan" target="_blank">github.com/topansopyan</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/topan-sopyan" target="_blank">linkedin.com/in/topan-sopyan</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/topansopyan" target="_blank">instagram.com/topansopyan</a></li>
+        </ul>
+    </div>
+</body>
+</html>

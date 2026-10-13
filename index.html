@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portofolio personal Topan Sopyan — Web Developer, Full-Stack AI Engineer, dan Educator di Karawang, Indonesia." />
+    <meta name="author" content="Topan Sopyan" />
+    <title>Topan Sopyan — Web Developer & AI Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+    <!-- Animated gradient background -->
+    <div class="bg-gradient" aria-hidden="true">
+        <span class="blob blob--1"></span>
+        <span class="blob blob--2"></span>
+        <span class="blob blob--3"></span>
+    </div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#hero" class="navbar__brand">
+                <span class="navbar__logo">TS</span>
+                <span class="navbar__name">Topan Sopyan</span>
+            </a>
+
+            <nav class="navbar__nav" id="navMenu" aria-label="Navigasi utama">
+                <a href="#hero" class="navbar__link">Beranda</a>
+                <a href="#about" class="navbar__link">Tentang</a>
+                <a href="#skills" class="navbar__link">Keahlian</a>
+                <a href="#projects" class="navbar__link">Project</a>
+                <a href="#experience" class="navbar__link">Pengalaman</a>
+                <a href="#testimonials" class="navbar__link">Testimoni</a>
+                <a href="#contact" class="navbar__link">Kontak</a>
+                <a href="assets/resume.html" target="_blank" class="btn btn--ghost btn--sm">Resume</a>
+            </nav>
+
+            <button class="navbar__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="hero">
+            <div class="container hero__inner">
+                <div class="hero__content reveal">
+                    <span class="badge">
+                        <span class="badge__dot"></span>
+                        Available for opportunities
+                    </span>
+
+                    <h1 class="hero__title">
+                        Halo, saya <span class="gradient-text">Topan Sopyan</span>
+                    </h1>
+
+                    <h2 class="hero__role">
+                        <span class="typewriter" id="typewriter"></span><span class="caret">|</span>
+                    </h2>
+
+                    <p class="hero__tagline">
+                        Membangun pengalaman digital cerdas dengan AI dan teknologi web modern.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#projects" class="btn btn--primary">
+                            Lihat Project
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                        <a href="assets/resume.html" target="_blank" class="btn btn--ghost">
+                            Download Resume
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="hero__socials">
+                        <a href="https://github.com/topansopyan" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/topan-sopyan" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM19 19h-3v-4.4c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3v-9h2.9v1.2h.04A3.2 3.2 0 0116 8.6c3.1 0 3.7 2 3.7 4.7z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/topansopyan" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2a3.7 3.7 0 01-.9 1.4c-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4a3.7 3.7 0 01-1.4-.9 3.7 3.7 0 01-.9-1.4c-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-.9 0-1.4.2-1.7.3-.4.2-.7.4-1 .7-.3.3-.5.6-.7 1-.1.3-.3.8-.3 1.7-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c0 .9.2 1.4.3 1.7.2.4.4.7.7 1 .3.3.6.5 1 .7.3.1.8.3 1.7.3 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c.9 0 1.4-.2 1.7-.3.4-.2.7-.4 1-.7.3-.3.5-.6.7-1 .1-.3.3-.8.3-1.7.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c0-.9-.2-1.4-.3-1.7a2.7 2.7 0 00-.7-1 2.7 2.7 0 00-1-.7c-.3-.1-.8-.3-1.7-.3-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8a3.1 3.1 0 100-6.2 3.1 3.1 0 000 6.2zm6.3-8.2a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__visual reveal">
+                    <div class="profile-card float">
+                        <div class="profile-card__glow"></div>
+                        <div class="profile-card__photo" id="profilePhoto">
+                            <img src="assets/profil.png" alt="Foto profil Topan Sopyan" />
+                        </div>
+                        <div class="profile-card__ring"></div>
+                        <div class="profile-chip profile-chip--1">AI</div>
+                        <div class="profile-chip profile-chip--2">&lt;/&gt;</div>
+                        <div class="profile-chip profile-chip--3">EDU</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="hero__scroll" aria-label="Scroll ke bawah">
+                <span class="mouse"><span class="mouse__wheel"></span></span>
+            </a>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__tag">01 — Tentang</span>
+                    <h2 class="section__title">Tentang <span class="gradient-text">Saya</span></h2>
+                </div>
+
+                <div class="about">
+                    <div class="about__text reveal">
+                        <p>
+                            Topan Sopyan is a passionate Web Developer, Full-Stack AI Engineer, and
+                            Educator with expertise in web development, full-stack systems, artificial
+                            intelligence, and educational technology.
+                        </p>
+                        <p>
+                            He specializes in building modern web applications, AI-powered solutions,
+                            interactive learning media, and digital platforms that enhance productivity
+                            and transform education. He enjoys solving real-world problems through
+                            innovative technologies, clean architecture, and meaningful learning
+                            experiences.
+                        </p>
+
+                        <ul class="about__highlights">
+                            <li><span class="dot"></span> Pengembangan aplikasi web modern & full-stack</li>
+                            <li><span class="dot"></span> Solusi berbasis AI untuk produktivitas</li>
+                            <li><span class="dot"></span> Media pembelajaran interaktif & edtech</li>
+                            <li><span class="dot"></span> Arsitektur kode bersih & scalable</li>
+                        </ul>
+                    </div>
+
+                    <div class="stats reveal">
+                        <div class="glass stat" data-count="7">
+                            <span class="stat__num" data-target="7">0</span>
+                            <span class="stat__label">Tahun Pengalaman</span>
+                        </div>
+                        <div class="glass stat" data-count="60">
+                            <span class="stat__num" data-target="60">0</span><span class="stat__suffix">+</span>
+                            <span class="stat__label">Project Selesai</span>
+                        </div>
+                        <div class="glass stat" data-count="1500">
+                            <span class="stat__num" data-target="1500">0</span><span class="stat__suffix">+</span>
+                            <span class="stat__label">Siswa Terbimbing</span>
+                        </div>
+                        <div class="glass stat" data-count="20">
+                            <span class="stat__num" data-target="20">0</span><span class="stat__suffix">+</span>
+                            <span class="stat__label">Teknologi Dikuasai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section class="section section--alt" id="skills">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__tag">02 — Keahlian</span>
+                    <h2 class="section__title">Tech <span class="gradient-text">Stack</span></h2>
+                </div>
+
+                <div class="skills" id="skillsGrid"></div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__tag">03 — Project</span>
+                    <h2 class="section__title">Project <span class="gradient-text">Unggulan</span></h2>
+                </div>
+
+                <div class="projects" id="projectsGrid"></div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section class="section section--alt" id="experience">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__tag">04 — Pengalaman</span>
+                    <h2 class="section__title">Work <span class="gradient-text">Experience</span></h2>
+                    <p class="section__sub">Perjalanan profesional membangun produk digital dan solusi AI.</p>
+                </div>
+
+                <div class="timeline" id="timeline"></div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="section" id="testimonials">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__tag">05 — Testimoni</span>
+                    <h2 class="section__title">Apa Kata <span class="gradient-text">Mereka</span></h2>
+                    <p class="section__sub">Umpan balik dari rekan kerja dan klien.</p>
+                </div>
+
+                <div class="testimonials" id="testimonialsGrid"></div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section section--alt" id="contact">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="section__tag">06 — Kontak</span>
+                    <h2 class="section__title">Mari <span class="gradient-text">Berkolaborasi</span></h2>
+                    <p class="section__sub">Punya ide project atau ingin bekerja sama? Kirim pesan atau hubungi saya langsung.</p>
+                </div>
+
+                <div class="contact-wrap">
+                    <!-- Contact info + map -->
+                    <div class="contact-info reveal">
+                        <a href="mailto:topan821@guru.sma.belajar.id" class="glass contact-card">
+                            <span class="contact-card__icon">✉️</span>
+                            <span class="contact-card__label">Email</span>
+                            <span class="contact-card__value">topan821@guru.sma.belajar.id</span>
+                        </a>
+                        <a href="tel:081298023889" class="glass contact-card">
+                            <span class="contact-card__icon">📱</span>
+                            <span class="contact-card__label">Telepon</span>
+                            <span class="contact-card__value">081298023889</span>
+                        </a>
+                        <a href="https://www.topansopyan.blog" target="_blank" rel="noopener" class="glass contact-card">
+                            <span class="contact-card__icon">🌐</span>
+                            <span class="contact-card__label">Portofolio</span>
+                            <span class="contact-card__value">www.topansopyan.blog</span>
+                        </a>
+                        <div class="glass contact-card">
+                            <span class="contact-card__icon">📍</span>
+                            <span class="contact-card__label">Lokasi</span>
+                            <span class="contact-card__value">Karawang, Indonesia</span>
+                        </div>
+
+                        <div class="glass map-embed">
+                            <iframe
+                                title="Lokasi — Karawang, Indonesia"
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=107.25%2C-6.38%2C107.42%2C-6.26&layer=mapnik&marker=-6.3227%2C107.3376"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <span class="map-embed__badge">📍 Karawang, Indonesia</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact form -->
+                    <form class="glass contact-form reveal" id="contactForm" novalidate>
+                        <div class="field">
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" name="name" placeholder="Nama lengkap Anda" autocomplete="name" required />
+                            <span class="field__error" data-for="name"></span>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email@contoh.com" autocomplete="email" required />
+                            <span class="field__error" data-for="email"></span>
+                        </div>
+                        <div class="field">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                            <span class="field__error" data-for="message"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary form-submit">
+                            Kirim Pesan
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                        </button>
+
+                        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="navbar__logo">TS</span>
+                <div>
+                    <strong>Topan Sopyan</strong>
+                    <p>Web Developer · Full-Stack AI Engineer · Educator</p>
+                </div>
+            </div>
+
+            <nav class="footer__nav" aria-label="Navigasi footer">
+                <a href="#hero">Beranda</a>
+                <a href="#about">Tentang</a>
+                <a href="#skills">Keahlian</a>
+                <a href="#projects">Project</a>
+                <a href="#experience">Pengalaman</a>
+                <a href="#testimonials">Testimoni</a>
+                <a href="#contact">Kontak</a>
+            </nav>
+
+            <div class="footer__socials">
+                <a href="https://github.com/topansopyan" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/topan-sopyan" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.3a1.75 1.75 0 110-3.5 1.75 1.75 0 010 3.5zM19 19h-3v-4.4c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3v-9h2.9v1.2h.04A3.2 3.2 0 0116 8.6c3.1 0 3.7 2 3.7 4.7z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/topansopyan" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2a3.7 3.7 0 01-.9 1.4c-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4a3.7 3.7 0 01-1.4-.9 3.7 3.7 0 01-.9-1.4c-.2-.4-.3-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0 4.9a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8a3.1 3.1 0 100-6.2 3.1 3.1 0 000 6.2zm6.3-8.2a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg>
+                </a>
+            </div>
+            <p class="footer__copy">© <span id="year"></span> Topan Sopyan. Dibuat dengan ❤️ di Karawang, Indonesia.</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="to-top" id="toTop" aria-label="Kembali ke atas">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
